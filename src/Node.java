@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /**
  * @program: A*
  * @description:
@@ -22,9 +24,19 @@ public class Node {
     private int f;
 
     /**
+     * g(n)
+     */
+    private int g;
+
+    /**
      * 结点状态矩阵
      */
     private int[][] matrix;
+
+    /**
+     * 父结点
+     */
+    Node parent;
 
     public Node(){}
 
@@ -55,6 +67,14 @@ public class Node {
         this.col = col;
     }
 
+    public int getG() {
+        return g;
+    }
+
+    public void setG(int g) {
+        this.g = g;
+    }
+
     public int getF() {
         return f;
     }
@@ -69,6 +89,14 @@ public class Node {
 
     public void setMatrix(int[][] matrix) {
         this.matrix = matrix;
+    }
+
+    public Node getParent() {
+        return parent;
+    }
+
+    public void setParent(Node parent) {
+        this.parent = parent;
     }
 
 }
